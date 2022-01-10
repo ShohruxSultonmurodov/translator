@@ -1,38 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100%;
+  background: url('img/nasa.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  padding: 2rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  justify-content: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-container , .output-container {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+select {
+  background:#0E243B;
+  color: #fff;
+  outline: none;
+  width: 40%;
+  font-size: 16px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  border: none;
+  outline: none;
+  background:#0E243B;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+textarea {
+  margin-top: .5rem;
+ width: 100%;
+ font-size: 18px;
+ outline: none;
+ transition: .3s;
+ background: #e5e5e5;
+ padding: 5px;
+}
+textarea:focus {
+  border: 1px solid #027afb;
+}
+@media only screen and (max-width:768px) {
+  .container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .input-container , .output-container {
+    margin: 1rem 2rem;
   }
 }
